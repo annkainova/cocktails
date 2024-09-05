@@ -38,7 +38,9 @@
     "modern-normalize": "^3.0.1",
     "prettier": "^3.3.3",
     "scss": "^0.2.4",
-    "stylelint": "^16.9.0",
+    "stylelint": "^16.5.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-order": "^6.0.4",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
