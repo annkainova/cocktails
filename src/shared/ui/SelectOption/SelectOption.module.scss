@@ -1,0 +1,17 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  padding: 6px 7px;
+  transition: all var(--animation-duration);
+  user-select: none;
+
+  &:not(.wrapper_disabled):hover {
+    background-color: var(--neu-11);
+    cursor: pointer;
+  }
+
+  &_disabled {
+    opacity: 0.5;
+  }
+}
