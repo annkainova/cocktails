@@ -13,10 +13,13 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "effector": "^23.2.3",
     "effector-react": "^23.2.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-tooltip": "^5.28.0",
+    "vite-plugin-svgr": "^4.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
