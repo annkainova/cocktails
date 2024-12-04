@@ -26,8 +26,8 @@ The project is built using the following technologies:
    `npm install`
 
 4. Run the application:
-   `npm start`
-   The app will be available at http://localhost:3000.
+   `npm run dev`
+   The app will be available at http://localhost:5173/
 
 ## Usage
 
