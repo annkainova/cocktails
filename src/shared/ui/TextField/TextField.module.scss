@@ -1,0 +1,16 @@
+@import '../../assets/styles/mixins';
+
+.textarea {
+  @include textfield;
+}
+
+.tooltip {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__message {
+  }
+}
