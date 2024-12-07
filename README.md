@@ -40,4 +40,5 @@ The project is built using the following technologies:
 If you have any questions or suggestions, feel free to reach out through GitHub.
 
 ## Stack
+
 We are using a svgr for better understanding go on [link](https://www.npmjs.com/package/vite-plugin-svgr)

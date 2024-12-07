@@ -1,6 +1,6 @@
-import Cross from './cross.svg';
-import Chevron from './chevron.svg';
-import Search from './search.svg';
+import Cross from './cross.svg?react';
+import Chevron from './chevron.svg?react';
+import Search from './search.svg?react';
 
 const Icons = {
   Cross,

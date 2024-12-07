@@ -1,7 +1,17 @@
-import Button from './shared/ui/Button/Button';
+import MultiSelect from './shared/ui/MultiSelect/MultiSelect';
 
 function App() {
-  return <Button>Button</Button>;
+  const options = [
+    {
+      label: <div>string</div>,
+      tagLabel: <div>string</div>,
+      searchValue: 'string',
+      checked: false,
+      onDelete: () => {},
+      onSelect: () => {},
+    },
+  ];
+  return <MultiSelect onClose={() => {}} clear={() => {}} options={options} />;
 }
 
 export default App;
