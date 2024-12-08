@@ -29,7 +29,7 @@ export function useResizableTextarea(
         element.style.height = `${element.scrollHeight + 2}px`;
       }
     }
-  }, [value]);
+  }, [value, isStop, textAreaRef]);
 
   return textAreaRef;
 }

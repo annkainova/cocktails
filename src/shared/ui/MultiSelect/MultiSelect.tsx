@@ -24,7 +24,7 @@ function MultiSelect({
 
   useEffect(() => {
     isShowModal === false && onClose && onClose();
-  }, [isShowModal]);
+  }, [isShowModal, onClose]);
 
   const onUncheckHandler = () => {
     clear();
