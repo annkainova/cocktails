@@ -1,0 +1,13 @@
+@import '../assets/styles/minixs.scss';
+
+.textarea {
+  @include textfield;
+}
+
+.tooltip {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
