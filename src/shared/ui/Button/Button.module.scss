@@ -1,0 +1,27 @@
+.button {
+  border: none;
+  border-radius: 16px;
+  padding: 16px 36px;
+  width: min-content;
+  height: min-content;
+  box-sizing: border-box;
+  font-size: var(--main-font-size);
+  color: var(--light-color);
+  background-color: var(--dark-color);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &:disabled {
+    background: var(--text-color);
+
+    &:hover {
+      transform: scale(1);
+    }
+  }
+}
