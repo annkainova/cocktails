@@ -1,4 +1,4 @@
 export interface ButtonProps {
-  buttonText: string;
+  children?: React.ReactNode;
   onClick?: () => void;
 }
