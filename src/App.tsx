@@ -1,17 +1,24 @@
-import MultiSelect from './shared/ui/MultiSelect/MultiSelect';
+import Card from './shared/ui/Card/Card';
 
 function App() {
-  const options = [
-    {
-      label: <div>string</div>,
-      tagLabel: <div>string</div>,
-      searchValue: 'string',
-      checked: false,
-      onDelete: () => {},
-      onSelect: () => {},
-    },
-  ];
-  return <MultiSelect onClose={() => {}} clear={() => {}} options={options} />;
+  return (
+    <Card
+      strDrink="string"
+      strInstructions="string"
+      strCategory="string"
+      strIBA="string"
+      strAlcoholic="string"
+      strDrinkThumb="https://www.thecocktaildb.com/images/media/drink/tqyrpw1439905311.jpg"
+      strIngredient1="Tequila"
+      strIngredient2="Triple sec"
+      strIngredient3="Lime juice"
+      strIngredient4="Salt"
+      strMeasure1="1 1/2 oz"
+      strMeasure2="1/2 oz"
+      strMeasure3="1/2 oz"
+      strMeasure4={null}
+    />
+  );
 }
 
 export default App;
