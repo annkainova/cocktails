@@ -9,7 +9,7 @@ import {
 } from './types.ts';
 
 import styles from './TextField.module.scss';
-import { useResizableTextarea } from '../../lib/useResizableTextarea.ts';
+import { useResizableTextarea } from '../../lib/hooks/useResizableTextarea.ts';
 import { TooltipAttributesType } from '../../types/tooltip.ts';
 
 const DEFAULT_INPUT_PLACEHOLDER = '';
