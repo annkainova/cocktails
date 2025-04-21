@@ -1,4 +1,4 @@
-import c from './Ingredient.module.scss';
+import cl from './Ingredient.module.scss';
 
 interface IngredientProps {
   name: string;
@@ -8,9 +8,9 @@ interface IngredientProps {
 const Ingredient = (props: IngredientProps) => {
   const { name, amount } = props;
   return (
-    <div className={c.ingredient}>
-      <p className={c.name}>{name}</p>
-      <p className={c.amount}>{amount}</p>
+    <div className={cl.ingredient}>
+      <p className={cl.name}>{name}</p>
+      <p className={cl.amount}>{amount}</p>
     </div>
   );
 };

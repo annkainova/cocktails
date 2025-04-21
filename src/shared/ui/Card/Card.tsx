@@ -1,80 +1,42 @@
-import CardTag from './CardTag/CardTag';
 import Ingredient from './Ingredient/Ingredient';
 import Icons from '../../icons';
-import { CardInterface } from './types';
+import { Cocktail } from './types';
 
-import c from './Card.module.scss';
+import cl from './Card.module.scss';
+import SelectTag from '../SelectTag';
+import { ozToMl } from '../../../utils/convertToMl';
 
-function Card(props: CardInterface) {
-  const {
-    strDrink,
-    strInstructions,
-    strIBA,
-    strCategory,
-    strAlcoholic,
-    strDrinkThumb,
-  } = props;
-
-  const ingredients = Array.from({ length: 15 }).map((_, i) => ({
-    name: props[`strIngredient${i + 1}` as keyof CardInterface],
-    amount: props[`strMeasure${i + 1}` as keyof CardInterface],
-  }));
-
-  function parseFraction(value: string | undefined | null): number {
-    if (!value) return 0;
-    const parts = value.slice(0, -3).split(' ');
-
-    if (parts.length === 2) {
-      const [whole, fraction] = parts;
-      const [numerator, denominator] = fraction.split('/');
-
-      return Number(whole) + Number(numerator) / Number(denominator);
-    } else if (parts[0].includes('/')) {
-      const [numerator, denominator] = parts[0].split('/');
-      return Number(numerator) / Number(denominator);
-    }
-    return Number(parts[0]);
-  }
+function Card(props: Cocktail) {
+  const { name, instructions, iba, category, alcoholic, image, ingredients } =
+    props;
 
   return (
-    <div className={c.card}>
-      <div className={c.imageWrapper}>
-        <div className={c.like}>
+    <div className={cl.card}>
+      <div className={cl.imageWrapper}>
+        <div className={cl.like}>
           <Icons.Like />
         </div>
-        <img
-          className={c.image}
-          src={strDrinkThumb}
-          alt={`${strDrink} image`}
-        />
+        <img className={cl.image} src={image} alt={`${name} image`} />
       </div>
-      <div className={c.content}>
-        <h4 className={c.title}>{strDrink}</h4>
-        <div className={c.tags}>
-          <CardTag tagLabel={strIBA} />
-          <CardTag tagLabel={strCategory} />
-          <CardTag tagLabel={strAlcoholic} />
+      <div className={cl.content}>
+        <h4 className={cl.title}>{name}</h4>
+        <div className={cl.tags}>
+          <SelectTag content={iba} tooltipTitle="IBA" hideDeleteIcon />
+          <SelectTag content={category} hideDeleteIcon />
+          <SelectTag content={alcoholic} hideDeleteIcon />
         </div>
-        <div className={c.ingredients}>
-          {ingredients
-            .filter((ing) => ing.name)
-            .map((ing, index) => {
-              const ozToMl = 29.573;
-              const amount =
-                ing.amount &&
-                Math.round(parseFraction(ing.amount) * ozToMl).toString() +
-                  ' ml';
-
-              return (
-                <Ingredient
-                  key={index}
-                  name={ing.name as string}
-                  amount={amount as string}
-                />
-              );
-            })}
+        <div className={cl.ingredients}>
+          {ingredients.map((ingredient, index) => {
+            return (
+              <Ingredient
+                key={index}
+                name={ingredient.name}
+                amount={ozToMl(ingredient.amount) || 'по вкусу'}
+              />
+            );
+          })}
         </div>
-        <p className={c.instructions}>{strInstructions}</p>
+        <p className={cl.instructions}>{instructions}</p>
       </div>
     </div>
   );
