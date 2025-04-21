@@ -9,7 +9,9 @@ function SelectTag(props: SelectTagProps) {
   const { content, onDelete, isDisabled, tooltipTitle, hideDeleteIcon } = props;
 
   const onDeleteHandler = () => {
-    !isDisabled && onDelete();
+    if (!isDisabled && onDelete) {
+      onDelete();
+    }
   };
 
   return (
