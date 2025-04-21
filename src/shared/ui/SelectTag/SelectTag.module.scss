@@ -9,7 +9,6 @@
   height: min-content;
   white-space: nowrap;
   gap: 10px;
-
 }
 
 .delete {
@@ -23,7 +22,6 @@
   }
 
   &:hover {
-
     /* stylelint-disable-next-line scss/selector-no-redundant-nesting-selector */
     & svg path {
       fill: var(--blue-2);
