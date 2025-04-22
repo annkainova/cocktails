@@ -1,5 +1,5 @@
-export function ozToMl(value: string | undefined | null): string | undefined {
-  if (!value) return undefined;
+export function ozToMl(value: string | undefined | null): string {
+  if (!value) return 'по вкусу';
 
   const cleanValue = value.toLowerCase().replace(/[a-z]/g, '').trim();
   const parts = cleanValue.split(' ');

@@ -22,8 +22,6 @@ const rawData: CardInterface = {
 
 const cocktail = normalizeCocktail(rawData);
 
-console.log(cocktail);
-
 function App() {
   return <Card {...cocktail} />;
 }

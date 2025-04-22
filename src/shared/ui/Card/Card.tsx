@@ -21,9 +21,9 @@ function Card(props: Cocktail) {
       <div className={cl.content}>
         <h4 className={cl.title}>{name}</h4>
         <div className={cl.tags}>
-          <SelectTag content={iba} tooltipTitle="IBA" hideDeleteIcon />
-          <SelectTag content={category} hideDeleteIcon />
-          <SelectTag content={alcoholic} hideDeleteIcon />
+          {[iba, category, alcoholic].map((tag) => (
+            <SelectTag key={tag} content={tag} hideDeleteIcon />
+          ))}
         </div>
         <div className={cl.ingredients}>
           {ingredients.map((ingredient, index) => {
@@ -31,7 +31,7 @@ function Card(props: Cocktail) {
               <Ingredient
                 key={index}
                 name={ingredient.name}
-                amount={ozToMl(ingredient.amount) || 'по вкусу'}
+                amount={ozToMl(ingredient.amount)}
               />
             );
           })}
