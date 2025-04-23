@@ -2,7 +2,8 @@ import { ReactNode } from 'react';
 
 export type SelectTagProps = {
   content: ReactNode;
-  onDelete: () => void;
+  onDelete?: () => void;
   isDisabled?: boolean;
   tooltipTitle?: string;
+  hideDeleteIcon?: boolean;
 };

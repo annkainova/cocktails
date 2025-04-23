@@ -1,0 +1,9 @@
+.ingredient {
+  display: flex;
+  justify-content: space-between;
+}
+
+.amount {
+  font-weight: 700;
+  color: var(--dark-color);
+}
