@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 import SelectTag from '../SelectTag';
 import TextField, { TextFieldVariant } from '../TextField';
-import usePopoverOpener from '../../lib/usePopoverOpener.ts';
+import usePopoverOpener from '../../lib/hooks/usePopoverOpener.ts';
 
 import { SearchSelectProps } from './types.ts';
 

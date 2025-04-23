@@ -22,6 +22,7 @@ const rawData: CardInterface = {
 
 const cocktail = normalizeCocktail(rawData);
 
+// TODO: add routing? and Layouot components?
 function App() {
   return <Card {...cocktail} />;
 }

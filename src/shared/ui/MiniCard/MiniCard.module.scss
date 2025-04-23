@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 640px;
+  gap: 25px;
+
+  .image_wrapper {
+    $size: 85px;
+
+    overflow: hidden;
+    border-radius: 5px;
+    width: $size;
+    height: $size;
+    background-color: #d9d9d9; // TODO: add var?
+
+    .image {
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    max-width: 470px;
+    gap: 12px;
+
+    .title {
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    .description {
+      font-size: 16px;
+      color: #858585; // TODO: add  variable too?
+    }
+  }
+}
