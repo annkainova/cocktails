@@ -1,4 +1,6 @@
 import Card from './shared/ui/Card/Card';
+import Loader from './shared/ui/Loader/Loader';
+
 import { CardInterface } from './types/CardInterface';
 import { normalizeCocktail } from './utils/normalizeCocktail';
 
@@ -21,10 +23,11 @@ const rawData: CardInterface = {
 };
 
 const cocktail = normalizeCocktail(rawData);
+const isLoading = true;
 
 // TODO: add routing? and Layouot components?
 function App() {
-  return <Card {...cocktail} />;
+  return isLoading ? <Loader /> : <Card {...cocktail} />;
 }
 
 export default App;
