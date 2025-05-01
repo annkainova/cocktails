@@ -1,4 +1,3 @@
-// shared/ui/Loader/Loader.tsx
 import cl from './Loader.module.scss';
 import gif from '../../../../public/ui/loader.webp';
 
