@@ -24,7 +24,7 @@
 }
 
 .slider::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 16px;
   height: 16px;
@@ -35,10 +35,10 @@
   transition: transform 0.3s;
 }
 
-.input:checked+.slider {
+.input:checked + .slider {
   background: var(--accent-color);
 }
 
-.input:checked+.slider::before {
+.input:checked + .slider::before {
   transform: translateX(20px);
 }
