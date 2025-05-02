@@ -1,30 +1,15 @@
-import Card from './shared/ui/Card/Card';
-import { CardInterface } from './types/CardInterface';
-import { normalizeCocktail } from './utils/normalizeCocktail';
+import { useState } from 'react';
+import Toggle from './shared/ui/Toggle/Toggle';
 
-const rawData: CardInterface = {
-  strDrink: 'Margarita',
-  strInstructions: 'Mix all ingredients...',
-  strCategory: 'Cocktail',
-  strIBA: 'Contemporary Classics',
-  strAlcoholic: 'Alcoholic',
-  strDrinkThumb:
-    'https://www.thecocktaildb.com/images/media/drink/tqyrpw1439905311.jpg',
-  strIngredient1: 'Tequila',
-  strIngredient2: 'Triple sec',
-  strIngredient3: 'Lime juice',
-  strIngredient4: 'Salt',
-  strMeasure1: '1 1/2 oz',
-  strMeasure2: '1/2 oz',
-  strMeasure3: '1/2 oz',
-  strMeasure4: null,
-};
-
-const cocktail = normalizeCocktail(rawData);
-
-// TODO: add routing? and Layouot components?
+// TODO: add routing? and Layout components?
 function App() {
-  return <Card {...cocktail} />;
+  const [darkMode, setDarkMode] = useState(false);
+
+  return (
+    <div>
+      <Toggle checked={darkMode} onChange={setDarkMode} label="Dark Mode" />
+    </div>
+  );
 }
 
 export default App;
