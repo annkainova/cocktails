@@ -16,7 +16,7 @@ function MultiSelect({
   options,
   onClose,
   clear,
-  placeholder = 'Не выбрано',
+  placeholder = 'Type an ingredient',
 }: SearchSelectProps) {
   const { elementRef, isShowModal, switchIsShowModal } = usePopoverOpener();
 

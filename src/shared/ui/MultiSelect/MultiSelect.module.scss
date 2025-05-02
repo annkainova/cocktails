@@ -1,6 +1,6 @@
 @import '../assets/styles/minixs.scss';
 
-$input-height: 32px;
+$input-height: 48px;
 
 .wrapper {
   position: relative;
@@ -11,15 +11,15 @@ $input-height: 32px;
   display: flex;
   align-items: center;
   overflow: hidden;
-  border: 1px solid var(--neu-8);
-  border-radius: 6px;
-  padding: 6px 8px 6px 12px;
-  background-color: var(--neu-12);
-  cursor: pointer;
-  gap: 5px;
+  border-radius: 16px;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.08);
+  cursor: text;
+  gap: 8px;
+  transition: box-shadow var(--animation-duration);
 
-  /* stylelint-disable-next-line scss/selector-no-redundant-nesting-selector */
-  & > *:first-child {
+  &>*:first-child {
     flex-grow: 1;
   }
 }
@@ -28,18 +28,22 @@ $input-height: 32px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
 
 .dropdown {
   @include popup-with-hidden;
-
   top: calc($input-height + 12px);
   display: flex;
   flex-direction: column;
   overflow: auto;
   max-height: 533px;
   gap: 10px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.08);
+  padding: 12px;
+  z-index: 5;
 }
 
 .options {
@@ -51,7 +55,7 @@ $input-height: 32px;
 .selected {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 6px;
 
   &__title {
     font-size: 14px;
@@ -79,9 +83,9 @@ $input-height: 32px;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  padding: 3px;
-  width: 20px;
-  height: 20px;
+  padding: 6px;
+  width: 28px;
+  height: 28px;
   background-color: var(--neu-9);
   transition: background-color var(--animation-duration) ease;
 
@@ -89,7 +93,6 @@ $input-height: 32px;
     background-color: var(--blue-2);
   }
 
-  /* stylelint-disable-next-line scss/selector-no-redundant-nesting-selector */
   & svg path {
     fill: var(--neu-12);
   }
@@ -104,7 +107,7 @@ $input-height: 32px;
 }
 
 .placeholder {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--neu-8);
 }
 
@@ -114,23 +117,40 @@ $input-height: 32px;
 
   &__icon {
     position: absolute;
-    left: 10px;
-    top: calc(50% - 10px);
+    right: 8px;
+    top: calc(50% - 16px);
+    width: 32px;
+    height: 32px;
+    background-color: #6fda44; // зелёная кнопка
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20px;
-    height: 20px;
+    cursor: pointer;
 
-    /* stylelint-disable-next-line scss/selector-no-redundant-nesting-selector */
-    & svg path {
-      fill: var(--neu-9);
+    svg {
+      width: 16px;
+      height: 16px;
+
+      & path {
+        fill: #fff;
+      }
     }
   }
 
   &__input {
-    --TextField-padding: 8px 8px 8px 40px;
-
+    --TextField-padding: 12px 48px 12px 16px;
     flex: 1;
+    border: none;
+    font-size: 16px;
+    background: transparent;
+
+    &::placeholder {
+      color: var(--neu-8);
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 }

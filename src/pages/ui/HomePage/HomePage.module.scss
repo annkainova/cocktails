@@ -1,7 +1,81 @@
-.page {
+.wrapper {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  background-color: #fffff0;
+  gap: 32px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 120px;
+  width: 100%;
+}
+
+.left {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  max-width: 420px;
+}
+
+.title {
+  font-size: var(--h1-font-size);
+  font-family: var(--font-family-en);
+  margin-bottom: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+  max-width: 500px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--neu-6);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionTitle {
+  font-size: var(--h2-font-size);
+  font-family: var(--font-family-en);
+  font-weight: 500;
+}
+
+.cocktailList {
+  display: flex;
+  flex-direction: column;
   gap: 12px;
+}
+
+.loginButton {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #222;
+  }
+}
+
+.image {
+  width: 80%;
+  border-radius: 16px;
+  object-fit: cover;
 }
