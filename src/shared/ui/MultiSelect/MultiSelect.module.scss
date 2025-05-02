@@ -19,7 +19,7 @@ $input-height: 48px;
   gap: 8px;
   transition: box-shadow var(--animation-duration);
 
-  &>*:first-child {
+  & > *:first-child {
     flex-grow: 1;
   }
 }
