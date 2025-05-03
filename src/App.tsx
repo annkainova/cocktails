@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Toggle from './shared/ui/Toggle/Toggle';
+import HomePage from './pages/ui/HomePage/HomePage';
 
 // TODO: add routing? and Layout components?
 function App() {
@@ -7,6 +8,7 @@ function App() {
 
   return (
     <div>
+      <HomePage />
       <Toggle checked={darkMode} onChange={setDarkMode} label="Dark Mode" />
     </div>
   );

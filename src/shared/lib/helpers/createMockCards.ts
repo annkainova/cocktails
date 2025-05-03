@@ -1,3 +1,4 @@
+// TODO: deprecate when we don`t need this one
 import { drinkDescriptions, titles } from '../../model/mockData';
 import { MiniatureCard } from '../../ui/MiniCard/types';
 
