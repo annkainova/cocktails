@@ -1,4 +1,4 @@
-import { CardInterface } from '../types/CardInterface';
+import { CardInterface } from '../shared/types/api/response';
 import { Cocktail } from '../shared/ui/Card/types';
 
 // Нормализация того что приходит с API в более удобный формат
