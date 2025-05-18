@@ -1,9 +1,9 @@
 import { createStore } from 'effector';
-import { fetchAllIngridientsFx } from './actions';
+import { fetchAllIngredientsFx } from './actions';
 
 const initialState: string[] = [];
 
-export const $ingridientsData = createStore(initialState).on(
-  fetchAllIngridientsFx.doneData,
+export const $ingredientsData = createStore(initialState).on(
+  fetchAllIngredientsFx.doneData,
   (_, payload) => payload
 );
