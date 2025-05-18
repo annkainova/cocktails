@@ -1,4 +1,4 @@
-.container {
+.homeContainer {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -13,7 +13,7 @@
 }
 
 .wrapper {
-  gap: 32px;
+  gap: 64px;
 }
 
 .left {
@@ -53,6 +53,11 @@
   font-size: var(--h2-font-size);
 }
 
+.cocktailList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
 .loginButton {
   border: none;
@@ -60,13 +65,13 @@
   padding: 12px 24px;
   font-weight: 600;
   font-size: 16px;
-  color: #fff;
-  background: #000;
+  color: var(--light-color);
+  background: var(--dark-color);
   transition: background 0.2s;
   cursor: pointer;
 
   &:hover {
-    background: #222;
+    background: var(--dark-color);
   }
 }
 

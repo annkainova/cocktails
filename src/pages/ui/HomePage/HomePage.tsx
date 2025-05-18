@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import MiniCard from '../../../shared/ui/MiniCard/MiniCard';
 import MultiSelect from '../../../shared/ui/MultiSelect/MultiSelect';
 import cl from './HomePage.module.scss';
@@ -21,9 +22,9 @@ const myCocktailArray = [
 
 export default function HomePage() {
   return (
-    <div className={cl.wrapper}>
+    <div className={clsx('container', cl.wrapper)}>
       <Header />
-      <div className={'container ' + cl.container}>
+      <div className={cl.homeContainer}>
         <div className={cl.left}>
           <div className={cl.section}>
             <h1 className={cl.title}>

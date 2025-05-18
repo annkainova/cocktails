@@ -148,7 +148,9 @@ function MultiSelect({
         </label>
         {checkedItems.length !== 0 && selectedSection}
         <div className={styles.options}>
-          {uncheckedItems.length !== 0 ? uncheckedItems : 'Ничего не найдено'}
+          {uncheckedItems.length !== 0
+            ? uncheckedItems
+            : 'Please choose something'}
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import cl from './Header.module.scss';
 
 function Header() {
   return (
-    <header className={'container ' + cl.header}>
+    <header className={cl.header}>
       <p>Тут нужен лайк</p>
       <Button>Login</Button>
     </header>
