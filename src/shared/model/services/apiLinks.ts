@@ -1,7 +1,7 @@
 const apiLinks = {
-  searchCoctailBy: '/search.php',
-  searchAllIngridients: '/list.php',
-  getRandomCoctails: '/randomselection.php',
+  searchCocktailBy: '/search.php',
+  searchAllIngredients: '/list.php',
+  getRandomCocktails: '/randomselection.php',
   filterBy: '/filter.php',
   lookupBy: '/lookup.php',
 };

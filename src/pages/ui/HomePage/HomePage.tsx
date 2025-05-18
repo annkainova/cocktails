@@ -1,3 +1,7 @@
+import { useEffect } from 'react';
+import { useUnit } from 'effector-react';
+import { $randomCocktail } from '../../../entities/model/store/drinks/store';
+import { getRandomCocktailsFx } from '../../../entities/model/store/ingridients/actions';
 import clsx from 'clsx';
 import MiniCard from '../../../shared/ui/MiniCard/MiniCard';
 import MultiSelect from '../../../shared/ui/MultiSelect/MultiSelect';
@@ -21,6 +25,16 @@ const myCocktailArray = [
 ];
 
 export default function HomePage() {
+  const randomCocktail = useUnit($randomCocktail);
+
+  useEffect(() => {
+    getRandomCocktailsFx();
+  }, []);
+
+  useEffect(() => {
+    console.log('Random cocktail updated:', randomCocktail);
+  }, [randomCocktail]);
+
   return (
     <div className={clsx('container', cl.wrapper)}>
       <Header />
@@ -35,11 +49,13 @@ export default function HomePage() {
 
           <div className={cl.section}>
             <h3 className={cl.sectionTitle}>Random Cocktail</h3>
-            <MiniCard
-              title="Margarita"
-              description="Dive into a world of refreshing drinks"
-              imageSrc="https://www.thecocktaildb.com/images/media/drink/tqyrpw1439905311.jpg"
-            />
+            {randomCocktail && randomCocktail.strDrink && (
+              <MiniCard
+                title={randomCocktail.strDrink}
+                description={randomCocktail.strInstructions}
+                imageSrc={randomCocktail.strDrinkThumb}
+              />
+            )}
           </div>
         </div>
 

@@ -2,48 +2,48 @@ import apiLinks from './apiLinks';
 import { baseInstance } from './instance';
 
 const apiService = {
-  searchByCoctailName: (coctailName: string) => {
-    return baseInstance().get(apiLinks.searchCoctailBy, {
+  searchByCocktailName: (cocktailName: string) => {
+    return baseInstance().get(apiLinks.searchCocktailBy, {
       params: {
-        s: coctailName,
+        s: cocktailName,
       },
     });
   },
-  getCoctailById: (id: string) => {
+  getCocktailById: (id: string) => {
     const params = { i: id };
     return baseInstance().get(apiLinks.lookupBy, {
       params,
     });
   },
-  getRandomCoctails: () => {
-    return baseInstance().get(apiLinks.getRandomCoctails);
+  getRandomCocktails: () => {
+    return baseInstance().get(apiLinks.getRandomCocktails);
   },
   // do we really need  this one(here we search an ingridient or coctail?)
-  searchByIngridientName: (ingridient: string) => {
-    return baseInstance().get(apiLinks.searchCoctailBy, {
+  searchByIngredientName: (ingredient: string) => {
+    return baseInstance().get(apiLinks.searchCocktailBy, {
       params: {
-        i: ingridient,
+        i: ingredient,
       },
     });
   },
   // and this one
   searchByFirstLetter: (letter: string) => {
-    return baseInstance().get(apiLinks.searchCoctailBy, {
+    return baseInstance().get(apiLinks.searchCocktailBy, {
       params: {
         f: letter,
       },
     });
   },
-  allIngridients: () => {
-    return baseInstance().get(apiLinks.searchAllIngridients, {
+  allIngredients: () => {
+    return baseInstance().get(apiLinks.searchAllIngredients, {
       params: {
         i: 'list', // const list of
       },
     });
   },
   // also cann add filter by categories, glasses or alcoholic
-  filterByIngridients: (ingridients: string) => {
-    const params = { i: ingridients };
+  filterByIngredients: (ingredients: string) => {
+    const params = { i: ingredients };
     return baseInstance().get(apiLinks.filterBy, {
       params,
     });

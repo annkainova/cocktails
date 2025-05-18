@@ -1,14 +1,17 @@
 import { createEffect } from 'effector';
 import apiService from '../../../../shared/model/services/apiService'; // update path
+import { CardInterface } from '../../../../shared/types/api/response';
 
-export const fetchAllIngridientsFx = createEffect(
+export const fetchAllIngredientsFx = createEffect(
   async (): Promise<string[]> => {
-    const response = await apiService.allIngridients();
+    const response = await apiService.allIngredients();
     return response.data as string[];
   }
 );
 
-export const getRandomCoctailsFx = createEffect(async (): Promise<string[]> => {
-  const response = await apiService.getRandomCoctails();
-  return response.data as string[];
-});
+export const getRandomCocktailsFx = createEffect(
+  async (): Promise<CardInterface[]> => {
+    const response = await apiService.getRandomCocktails();
+    return response.data.drinks as CardInterface[];
+  }
+);
