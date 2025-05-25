@@ -5,12 +5,12 @@ import cl from './MiniCardList.module.scss';
 export const MiniCardList = ({ items }: MiniCardListProps) => {
   return (
     <div className={cl.cocktailList}>
-      {items.map((item, index) => (
+      {items.map(({ title, description, imageSrc }, index) => (
         <MiniCard
           key={index}
-          title={item.title}
-          description={item.description}
-          imageSrc={item.imageSrc}
+          title={title}
+          description={description}
+          imageSrc={imageSrc}
         />
       ))}
     </div>

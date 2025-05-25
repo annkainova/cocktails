@@ -8,21 +8,7 @@ import MultiSelect from '../../../shared/ui/MultiSelect/MultiSelect';
 import cl from './HomePage.module.scss';
 import Header from '../../../shared/ui/Header/Header';
 import { MiniCardList } from '../../../shared/ui/MiniCardList/MiniCardList';
-
-const myCocktailArray = [
-  {
-    title: 'Margarita',
-    description: 'Dive into a world of refreshing drinks',
-    imageSrc:
-      'https://www.thecocktaildb.com/images/media/drink/tqyrpw1439905311.jpg',
-  },
-  {
-    title: 'Margarita',
-    description: 'Dive into a world of refreshing drinks',
-    imageSrc:
-      'https://www.thecocktaildb.com/images/media/drink/tqyrpw1439905311.jpg',
-  },
-];
+import { myCocktailArray } from './data_cocktail';
 
 export default function HomePage() {
   const randomCocktail = useUnit($randomCocktail);
@@ -30,10 +16,6 @@ export default function HomePage() {
   useEffect(() => {
     getRandomCocktailsFx();
   }, []);
-
-  useEffect(() => {
-    console.log('Random cocktail updated:', randomCocktail);
-  }, [randomCocktail]);
 
   return (
     <div className={clsx('container', cl.wrapper)}>
