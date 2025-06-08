@@ -9,8 +9,8 @@
 
     overflow: hidden;
     border-radius: 5px;
-    width: $size;
     height: $size;
+    max-width: $size;
     background-color: #d9d9d9; // TODO: add var?
 
     .image {

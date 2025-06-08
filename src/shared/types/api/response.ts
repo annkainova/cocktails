@@ -39,7 +39,7 @@ export interface CardInterface {
   strMeasure15?: string | null;
 }
 
-export interface Ingridients {
+export interface Ingredients {
   strIngredient1: string | null;
   strIngredient2: string | null;
   strIngredient3: string | null;
@@ -73,7 +73,7 @@ export interface Measure {
 }
 
 // TODO: update this one)
-export interface COCTAIL extends Ingridients, Measure {
+export interface COCKTAIL extends Ingredients, Measure {
   idDrink: '11007';
   strDrink: 'Margarita';
   strDrinkAlternate: null;

@@ -1,7 +1,82 @@
-.page {
+.homeContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 120px;
+}
+
+.wrapper,
+.left,
+.right {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  background-color: #fffff0;
+}
+
+.wrapper {
+  gap: 64px;
+}
+
+.left {
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.right {
+  align-items: flex-start;
+  max-width: 420px;
+  gap: 32px;
+}
+
+.title {
+  margin-bottom: 16px;
+  max-width: 500px;
+  font-family: var(--font-family-en);
+  font-weight: 500;
+  font-size: var(--h1-font-size);
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--neu-6);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionTitle {
+  font-family: var(--font-family-en);
+  font-weight: 500;
+  font-size: var(--h2-font-size);
+}
+
+.cocktailList {
+  display: flex;
+  flex-direction: column;
   gap: 12px;
+}
+
+.loginButton {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--light-color);
+  background: var(--dark-color);
+  transition: background 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--dark-color);
+  }
+}
+
+.image {
+  border-radius: 16px;
+  width: 80%;
+  object-fit: cover;
 }

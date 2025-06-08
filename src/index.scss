@@ -110,3 +110,8 @@ li {
 .stop-scroll {
   overflow: hidden;
 }
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
